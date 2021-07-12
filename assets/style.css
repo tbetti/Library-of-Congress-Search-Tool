@@ -1,0 +1,50 @@
+:root{
+    --primary: rgb(3, 25, 38);
+    --secondary: rgb(224, 234, 243);
+    --tertiary: rgb(247, 255, 246);
+    --accent1: rgb(231, 111, 81);
+    --accent2: rgb(42, 157, 143);
+}
+
+body{
+    background-color: var(--primary);
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.1%;
+    padding-bottom: 0.5%;
+    background-color: var(--secondary);
+    text-align: center;
+    color: var(--primary);
+}
+
+.input{
+    font-size: 18px;
+    width: 89%;
+    margin: 0.5%;
+    padding: 0.5%;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+button{
+    background-color: var(--accent2);
+    color: var(--tertiary);
+    font-size: 18px;
+    width: 90%;
+    margin: 2%;
+    margin-top: 0.5%;
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
