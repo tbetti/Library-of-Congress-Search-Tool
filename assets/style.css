@@ -21,7 +21,19 @@ body{
     padding-bottom: 0.5%;
     background-color: var(--secondary);
     text-align: center;
+}
+
+aside{
+    background-color: var(--secondary);
+    height: 100%;
+    width: 25%;
+    padding: 1%;
+    margin: -1%;
+}
+
+.heading{
     color: var(--primary);
+    font-size: 36px;
 }
 
 .input{
@@ -34,7 +46,6 @@ body{
 }
 
 button{
-    background-color: var(--accent2);
     color: var(--tertiary);
     font-size: 18px;
     width: 90%;
@@ -47,4 +58,11 @@ button{
 
 button:hover{
     cursor: pointer;
+}
+
+.submit{
+    background-color: var(--accent2);
+}
+.return{
+    background-color: var(--accent1);
 }
