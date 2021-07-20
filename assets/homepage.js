@@ -1,14 +1,23 @@
-var search = $("#search");
-console.log(search);
-console.log(search.value);
 
-var formSubmit = function(event){
+$("button").click(formSubmit);
+function formSubmit(event) {
     event.preventDefault();
 
-    var searchInput = search.value.trim();
-    if(searchInput){
-        console.log(searchInput);
-    }else{
+    var search = splitString($("#search").val());
+    var format = $("#format").val();
+    
+    if (search) {
+        var url = "https://www.loc.gov/" + format + "/?q=" + search + "&fo=json";
+        console.log(url);
+    } else {
         alert("Please enter seach keyword(s)");
     }
 };
+
+// For multi-word searches, join each word with "-"
+// Example: New York --> New-York
+function splitString(string){
+    string = string.split(" ");
+    string = string.join("-");
+    return string;
+}
