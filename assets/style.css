@@ -60,6 +60,16 @@ aside{
     font-size: 32px;
 }
 
+.search-card{
+    background-color: var(--secondary);
+    padding: 3%;
+}
+
+.see-more-btn {
+    background-color: var(--accent2);
+    width: 25%;
+}
+
 button{
     color: var(--tertiary);
     font-size: 18px;
