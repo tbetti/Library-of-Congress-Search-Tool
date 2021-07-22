@@ -1,7 +1,7 @@
 
 var redirectUrl = "./search-page.html";
 
-$("button").click(formSubmit);
+$("#submit").click(formSubmit);
 function formSubmit(event) {
     event.preventDefault();
     
