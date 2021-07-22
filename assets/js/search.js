@@ -16,7 +16,7 @@ function formSubmit(event) {
     event.preventDefault();
     console.log("click");
     
-    resultsContainer.innerHTML = "";
+    resultsContainer.empty();
     search = $("#search").val();
     format = $("#format").val();
     console.log(format);
