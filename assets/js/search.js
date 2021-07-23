@@ -20,15 +20,13 @@ $("#return").click(function(event){
 })
 
 // When submit button clicked again, change search and format values
-$("#submit").click(formSubmit);
-function formSubmit(event) {
+$("#submit").click(function(event) {
     event.preventDefault();
-    console.log("click");
     
     resultsContainer.empty();
     search = $("#search").val();
     format = $("#format").val();
-    console.log(format);
+
     if (search) {
         window.sessionStorage.setItem("search", search);
         window.sessionStorage.setItem("format", format);
@@ -38,11 +36,16 @@ function formSubmit(event) {
     } else {
         alert("Please enter seach keyword(s)");
     }
-};
+})
 
 // Use search and format results to fetch data from url
 function fetchData(format, search){
-    var url = "https://www.loc.gov/" + format + "/?q=" + splitString(search) + "&fo=json";
+    var url;
+    if(format === ""){
+        url = "https://www.loc.gov/?q=" + splitString(search) + "&fo=json"
+    }else{
+        url = "https://www.loc.gov/" + format + "/?q=" + splitString(search) + "&fo=json";
+    }
     console.log(url);
     
     fetch(url)
@@ -55,31 +58,34 @@ function fetchData(format, search){
             var date;
             var description;
             var subject;
-            for (var i = 0; i < 5; i++){
-                if (data.results[i].title){
+            console.log(data.results.length);
+            for (var i = 0; i < 10 || i < data.results.length; i++){
+                if("title" in data.results[i]){
                     title = data.results[i].title;
                 }else{
                     title = "No title";
                 }
-                if(data.results[i].date){
+                if("date" in data.results[i]){
                     date = data.results[i].date;
                 }else{
                     date = "N/A"
                 }
-                if(data.results[i].description[0]){
+                if("description" in data.results[i]){
                     description = data.results[i].description[0];
                 }else{
                     description = "none"
                 }
-                if(data.results[i].subject){
+                if("subject" in data.results[i]){
                     subject = data.results[i].subject;
                 }else{
                     subject = "none";
                 }
                 var url = data.results[i].url;
-                console.log("button url: " + url)
                 createCard(title, date, subject, description, url);
             }
+        })
+        .catch(function(err){
+            resultsContainer.append("<h3>No results found.</h4>"); // will display if there are limited results
         })
 }
 
