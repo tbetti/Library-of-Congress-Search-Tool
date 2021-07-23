@@ -1,3 +1,4 @@
+/* Set color scheme */
 :root{
     --primary: rgb(3, 25, 38);
     --secondary: rgb(224, 234, 243);
@@ -6,32 +7,10 @@
     --accent2: rgb(42, 157, 143);
 }
 
+/* Styling for both pages */
 body{
     background-color: var(--primary);
     display: flex;
-}
-
-.homepage{
-    height: 700px;
-    align-items: center;
-}
-
-.card{
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 0.1%;
-    padding-bottom: 0.5%;
-    background-color: var(--secondary);
-    text-align: center;
-}
-
-aside{
-    background-color: var(--secondary);
-    width: 25%;
-    padding: 1%;
-    margin-left: -1%;
-    margin-top: -1%;
 }
 
 .heading{
@@ -47,7 +26,54 @@ aside{
     border: 1px solid grey;
     border-radius: 5px;
 }
+/* Buttons for both pages */
+button{
+    color: var(--tertiary);
+    font-size: 18px;
+    width: 90%;
+    margin: 2%;
+    margin-top: 0.5%;
+    padding: 1%;
+    border: none;
+    border-radius: 5px;
+}
+button:hover{
+    cursor: pointer;
+}
+.submit{
+    background-color: var(--accent2);
+}
+.return{
+    background-color: var(--accent1);
+}
 
+/* Homepage styling */
+.homepage{
+    height: 700px;
+    align-items: center;
+}
+
+.card{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.1%;
+    padding-bottom: 0.5%;
+    background-color: var(--secondary);
+    text-align: center;
+}
+
+/* Search page styling */
+/* Search box */
+aside{
+    background-color: var(--secondary);
+    width: 25%;
+    padding: 1%;
+    margin-left: -1%;
+    margin-top: -1%;
+}
+
+/* Results section */
 .search-results{
     width: 75%;
     padding-left: 2%;
@@ -59,35 +85,23 @@ aside{
     font-size: 32px;
 }
 
+.search-results h3{
+    color: white;
+    font-size: 24px;
+}
+
+/* Styling for each search result card */
 .search-card{
     background-color: var(--secondary);
     padding: 3%;
     margin-bottom: 3%;
 }
 
+.search-card .search-title{
+    color: var(--primary);
+}
+
 .see-more-btn {
     background-color: var(--accent2);
     width: 25%;
-}
-
-button{
-    color: var(--tertiary);
-    font-size: 18px;
-    width: 90%;
-    margin: 2%;
-    margin-top: 0.5%;
-    padding: 1%;
-    border: none;
-    border-radius: 5px;
-}
-
-button:hover{
-    cursor: pointer;
-}
-
-.submit{
-    background-color: var(--accent2);
-}
-.return{
-    background-color: var(--accent1);
 }
