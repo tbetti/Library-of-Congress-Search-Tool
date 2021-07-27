@@ -1,0 +1,67 @@
+@media screen and (max-width: 730px) {
+    /* Styling for homepage */
+    .homepage{
+        height: 640px;
+        align-items: center;
+    }
+    .card{
+        width: 90%;
+    }
+    .homepage .card .heading{
+        font-size: 26px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .homepage .card .input{
+        margin-bottom: 3%;
+    }
+    /* Styling for search page */
+    .search-page-body{
+        flex-direction: column-reverse;
+    }
+    aside{
+        width: 100%;
+        margin-top: 4%;
+    }
+    aside .heading{
+        font-size: 24px;
+        text-align: center;
+    }
+    aside .input{
+        width: 97%;
+        margin-bottom: 3%;
+    }
+    aside .button-container{
+        display: flex;
+        justify-content: center;
+    }
+    aside .button-container button{
+        width: 50%;
+    }
+    .search-results{
+        width: 97%;
+        padding-bottom: 4%;
+        margin-bottom: 3%;
+        border-bottom: 7px dotted var(--accent1);
+    }
+    .search-results h2{
+        text-align: center;
+    }
+    .search-card{
+        justify-content: flex-end;
+    }
+    .see-more-btn{
+        width: 40%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        margin-top: 2%;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .homepage{
+        height: 568px;
+    }
+}

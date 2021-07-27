@@ -42,7 +42,7 @@ $("#submit").click(function(event) {
 function fetchData(format, search){
     var url;
     if(format === ""){
-        url = "https://www.loc.gov/?q=" + splitString(search) + "&fo=json"
+        url = "https://www.loc.gov/search/?q=" + splitString(search) + "&fo=json"
     }else{
         url = "https://www.loc.gov/" + format + "/?q=" + splitString(search) + "&fo=json";
     }
