@@ -16,6 +16,7 @@
         margin-bottom: 3%;
     }
     /* Styling for search page */
+    /* Search Box */
     .search-page-body{
         flex-direction: column-reverse;
     }
@@ -38,6 +39,7 @@
     aside .button-container button{
         width: 50%;
     }
+    /* Results Section */
     .search-results{
         width: 97%;
         padding-bottom: 4%;
@@ -47,6 +49,7 @@
     .search-results h2{
         text-align: center;
     }
+    /* Each Card */
     .search-card{
         justify-content: flex-end;
     }
