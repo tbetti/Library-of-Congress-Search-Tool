@@ -18,4 +18,4 @@
     <li><b>LinkedIn: </b><a href="https://www.linkedin.com/in/tianabettinson/">linkedIn.com/in/TianaBettinson</a></li>
 </ul>
 <h3>License</h3>
-<p>View the <a href="/license">MIT License</a> here</p>
+<p>View the <a href="./License">MIT License</a> here</p>
